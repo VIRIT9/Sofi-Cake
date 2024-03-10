@@ -1,0 +1,249 @@
+* {
+
+    margin: 0 ;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+
+}
+
+body{
+    text-align: center;
+    font-family: sans-serif;
+    background: #171717
+}
+
+h3{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-bottom: 40px;
+   }
+
+/* Barra de navegación */
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.507);
+    position: fixed; /* Posiciona la parte de arriba para que si movemos hacia abajo quede posicionada en el mismo sitio*/
+    width: 100%;
+    z-index: 100; /*Hace que se posicione adelante de cualquier elemento*/
+}
+
+.navbar{
+    display: flex;
+    margin-right: 10px;
+}
+
+.logo a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.navbar a{
+    display: block;
+    padding: 23px 20px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a:hover{
+    background-color: rgb(152, 51, 172);
+    height: 13px;
+}
+
+header{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header {
+    
+    height: 70vh !important;
+    background :url( cea9ef194827e65b0a6707882db0b0cb.jpeg) no-repeat center ;
+    background-size: cover ;
+}
+
+
+title{
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+a{
+    color: white;
+}
+
+h2 {
+    color:rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+p{ 
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    padding: 0 100px;
+}
+
+.content header{
+    padding-bottom: 20px;
+}
+
+
+.btn{
+    
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: rgb(255, 255, 255) 2px;
+}
+
+
+/*Estilo de botones */
+.btn{
+display: inline-block;
+margin-top: 15px;
+padding: 10px 40 px; /* Primer numero es arriba y abajo y el segundo es izquierda y derecha*/
+border: 2px solid rgba(0, 0, 0, 0.925);
+color: rgb(0, 0, 0);
+text-decoration: none;
+background: rgba(255, 255, 255, 0.623);
+}
+
+
+.btn:hover{
+    background:  rgba(134, 64, 155, 0.753);;
+}
+
+
+.btn-home{
+    display: flex;
+}
+
+
+.btn-home a{
+    margin: 0 10px; /* Separacion de los botones */
+}
+
+
+.content{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+
+.saw{
+    padding: 30px;
+    background:#222121
+}
+
+
+/*Cambia la posicion de los cuadrados  */
+.box-container{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+
+/*Cambia el estilo de los cuadrados */
+.box-container .box {
+    height: 11rem; 
+    width: 17rem;
+    background: rgb(14, 13, 13);
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .1rem 1rem rgb(77, 76, 76);
+    margin: 2rem;
+    
+}
+
+/*Cambia la forma y color de los iconos  */
+.box-container .box i {
+height: 3rem;
+width: 3rem;
+line-height: 3rem;
+text-align: center;
+border-radius: 50%;
+color: rgb(255, 255, 255);
+background: rgb(82, 1, 78);
+font-size: 2rem;
+margin: 1rem 0;
+}
+
+
+.box-container .box h3{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+
+.box-container .box p {
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+
+.about {
+    background: rgb(24, 22, 22);
+}
+
+
+.price{
+    background: url(precio.webp) no-repeat;
+    background-attachment: fixed;background-size: cover;
+    text-align: center;
+}
+
+
+.contact {
+    padding-top: 60px;
+    background-color: black;
+    padding-bottom: 0;
+    
+}
+
+/* Contacto*/
+
+.info{
+    text-align: left; 
+}
+
+#autor{ 
+    margin-bottom: 30px;
+    text-align: right;
+   
+}
+
+/* Estilo para el modo oscuro */
+.dark-theme {
+    background-color: #0f0f0fb0;
+    color: #fff;
+  }
+  
+  /* Estilo para el modo claro */
+  .light-theme {
+    background-color: #fff;
+    color: #000;
+  }
+  
