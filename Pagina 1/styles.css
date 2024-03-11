@@ -5,21 +5,31 @@
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
+     color: white;
+}
 
+
+.content .section-title {
+    
+    font-size: 30px;
+    margin-bottom: 40px;
+    
 }
 
 body{
     text-align: center;
     font-family: sans-serif;
-    background: #171717
+    
 }
 
-h3{
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    margin-bottom: 40px;
-   }
 
+p{ 
+    margin-bottom: 40px;
+    font-size: 18px;
+    padding: 0 100px;
+}
+
+ 
 /* Barra de navegación */
 .head{
     display: flex;
@@ -55,8 +65,9 @@ h3{
 }
 
 .navbar a:hover{
-    background-color: rgb(152, 51, 172);
-    height: 13px;
+     background-color: rgb(152, 51, 172);
+     padding: 11px 20px;
+    text-align: left;
 }
 
 header{
@@ -68,76 +79,24 @@ header{
 
 
 .header {
-    
     height: 70vh !important;
-    background :url( cea9ef194827e65b0a6707882db0b0cb.jpeg) no-repeat center ;
-    background-size: cover ;
+    background: url(Imagenes/cea9ef194827e65b0a6707882db0b0cb.jpeg) no-repeat center;
+    background-size: cover;
+    color: white;
 }
 
 
-title{
+/*title{
     margin-bottom: 40px;
     font-size: 60px;
-    font-weight: 600;
+    font-weight: 600px  ;
     text-transform: uppercase;
-    color: white;
-}
+    
+}*/
 
-
-a{
-    color: white;
-}
-
-h2 {
-    color:rgb(255, 255, 255);
-    font-size: 30px;
-}
-
-p{ 
-    margin-bottom: 40px;
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    padding: 0 100px;
-}
 
 .content header{
     padding-bottom: 20px;
-}
-
-
-.btn{
-    
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 40px;
-    border: rgb(255, 255, 255) 2px;
-}
-
-
-/*Estilo de botones */
-.btn{
-display: inline-block;
-margin-top: 15px;
-padding: 10px 40 px; /* Primer numero es arriba y abajo y el segundo es izquierda y derecha*/
-border: 2px solid rgba(0, 0, 0, 0.925);
-color: rgb(0, 0, 0);
-text-decoration: none;
-background: rgba(255, 255, 255, 0.623);
-}
-
-
-.btn:hover{
-    background:  rgba(134, 64, 155, 0.753);;
-}
-
-
-.btn-home{
-    display: flex;
-}
-
-
-.btn-home a{
-    margin: 0 10px; /* Separacion de los botones */
 }
 
 
@@ -151,57 +110,12 @@ background: rgba(255, 255, 255, 0.623);
 
 
 .saw{
+    height: max-content;
     padding: 30px;
     background:#222121
-}
-
-
-/*Cambia la posicion de los cuadrados  */
-.box-container{
-
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-
-}
-
-/*Cambia el estilo de los cuadrados */
-.box-container .box {
-    height: 11rem; 
-    width: 17rem;
-    background: rgb(14, 13, 13);
-    text-align: center;
-    border-radius: 1rem;
-    box-shadow: 0 .1rem 1rem rgb(77, 76, 76);
-    margin: 2rem;
     
 }
 
-/*Cambia la forma y color de los iconos  */
-.box-container .box i {
-height: 3rem;
-width: 3rem;
-line-height: 3rem;
-text-align: center;
-border-radius: 50%;
-color: rgb(255, 255, 255);
-background: rgb(82, 1, 78);
-font-size: 2rem;
-margin: 1rem 0;
-}
-
-
-.box-container .box h3{
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-}
-
-
-.box-container .box p {
-    padding: 0 15px;
-    font-size: 16px;
-}
 
 
 .about {
@@ -210,40 +124,78 @@ margin: 1rem 0;
 
 
 .price{
-    background: url(precio.webp) no-repeat;
+    background: url(Imagenes/precio.webp) no-repeat;
     background-attachment: fixed;background-size: cover;
     text-align: center;
 }
 
 
+/* Zona de "Contacto"*/
 .contact {
-    padding-top: 60px;
-    background-color: black;
-    padding-bottom: 0;
+    padding-top: 20px;
+    background-color: rgb(22, 22, 22);
     
-}
-
-/* Contacto*/
-
-.info{
-    text-align: left; 
-}
-
+ }
 #autor{ 
     margin-bottom: 30px;
     text-align: right;
-   
+    color: black;
 }
 
-/* Estilo para el modo oscuro */
-.dark-theme {
-    background-color: #0f0f0fb0;
-    color: #fff;
-  }
-  
-  /* Estilo para el modo claro */
-  .light-theme {
-    background-color: #fff;
-    color: #000;
-  }
-  
+
+/* Carrusel*/
+.carousel-inner {
+    width: 100%;
+}
+
+.carousel-item img {
+    max-width: 150%;
+    height: auto;
+    max-height: 220px; 
+    object-fit: cover; 
+}
+
+#carouselPostres .carousel-item img,
+#carouselTortas .carousel-inner img,
+#carouselMasitas .carousel-inner img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 200px; 
+    object-fit: cover;
+}
+
+
+
+.medios a {
+    
+    margin-right: 40px; 
+    padding-top: 9px;
+}
+
+.medios i {
+    display: flex;  
+    font-size: 25px; 
+}
+
+
+/*Catalogo*/
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.description {
+    text-align: center;
+}
+
+
+
