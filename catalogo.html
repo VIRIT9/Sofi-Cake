@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofi's Cakes</title>
+    <link href="catalogo.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d48df28e25.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="index.html">Sofi's Cakes</a>
+        </div> 
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="catalogo.html">Productos</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
+    </div>
+
+    <header class="content header">
+        <h3 class="section-title" style="margin-bottom: 15px;">Bienvenido a Sofi's Cakes</h3>
+        <h3 class="section-title" style="margin-top: 10px;">Deléitate con los mejores postres de Montevideo</h3>
+    </header>
+    <br><br><br>
+
+    <div class="products">
+    <h2>Tortas de cumpleaños</h2>
+    <br>
+    <div class="row">
+        <div class="col">
+            <div class="column">
+                <img src="catalogo/tortaFlores.jpg" class="d-block mx-auto img-fluid"  alt="Torta de flores">
+                
+                <div class="Polaroid-title">Torta de Flores <br> $1099</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="column">
+                <img src="catalogo/tortaConfeti.jpg" class="d-block mx-auto img-fluid" alt="Torta de confeti">
+                <div class="Polaroid-title">Torta de Confeti <br> $699</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="column">
+                <img src="catalogo/tortaChocolate.jpg" class="d-block mx-auto img-fluid" alt="Torta de frutilla">
+                <div class="Polaroid-title">Torta de Chocolate <br> $1299</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="column">
+                <img src="catalogo/tortaGolosinas.jpg" class="d-block mx-auto img-fluid" alt="Torta de golosinas">
+                <div class="Polaroid-title">Torta de Golosinas <br> $1799</div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <h2>Masitas</h2>
+    <br>
+    <div class="row">
+        <div class="col">
+            <div class="column">
+                <img src="catalogo/masitasSecas.jpg" class="d-block mx-auto img-fluid" alt="Masitas secas surtidas">
+                <div class="Polaroid-title">Masitas Secas Surtidas <br> $799</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="column">
+                <img src="catalogo/conitosSurtidos.jpg" class="d-block mx-auto img-fluid" alt="Conitos de Dulce de Leche">
+                <div class="Polaroid-title">Conitos de Dulce de Leche Surtidos <br> $699</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="column">
+                <img src="catalogo/masitasMousse.jpg" class="d-block mx-auto img-fluid" alt="Masitas de Mousse">
+                <div class="Polaroid-title">Masitas de Mousse <br> $999</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="column">
+                <img src="catalogo/espejitos.webp" class="d-block mx-auto img-fluid" alt="Espejitos">
+                <div class="Polaroid-title">Espejitos <br> $699</div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <h2>Postres</h2>
+    <br>
+    <div class="row">
+        <div class="col">
+            <div class="column">
+                <img src="catalogo/cheesecakeFrutilla.jpg" class="d-block mx-auto img-fluid" alt="Cheesecake de Frutilla">
+                <div class="Polaroid-title">Cheesecake de Frutilla <br> $999</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="column">
+                <img src="catalogo/cheesecakeMaracuya.webp" class="d-block mx-auto img-fluid" alt="Cheesecake de Maracuya">
+                <div class="Polaroid-title">Cheesecake de Maracuya <br> $1199</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="column">
+                <img src="catalogo/brownies.jpg" class="d-block mx-auto img-fluid" alt="Brownie con Chocolate Blanco">
+                <div class="Polaroid-title">Brownie con Chocolate Blanco <br> $999</div>
+            </div>
+        </div>
+         <div class="col">
+            <div class="column">
+                <img src="catalogo/postreVaso.jpg" class="d-block mx-auto img-fluid" alt="Tarta de Chocolate">
+                <div class="Polaroid-title">Postres en vasos <br> $699</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function toggleMenu() {
+            var navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,269 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    color: white;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* Header Styles */
+.header {
+    height: 70vh !important;
+    background: url(imagenes/fondo.jpeg) no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+.content .section-title {
+    font-size: 200%;
+    margin-bottom: 5%;
+}
+
+/* Navigation Styles */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 2% 4%;
+    text-decoration: none;
+    font-size: 100%;
+    display: block;
+}
+
+.topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+
+.logo a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 130%;
+}
+
+.navbar a {
+    display: block;
+    padding: 23px 20px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 100%;
+}
+
+.active {
+    background-color: #000000;
+    color: white;
+}
+
+/* Additional Styles */
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    padding: 0 100px;
+}
+
+a.btn-saber-mas {
+    color: white;
+    text-decoration: none;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.507);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+}
+
+.navbar a:hover {
+    background-color: rgb(152, 51, 172);
+}
+
+.content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.saw {
+    font-size: 80%;
+    height: max-content;
+    padding: 7%;
+    background: #222121;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.about {
+    background: rgb(24, 22, 22);
+    text-align: center;
+    align-items: center;
+    font-size: 100%;
+}
+
+.price {
+    background: url(imagenes/precio.webp) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+.contain p {
+    background-color: rgba(48, 47, 47, 0.3);
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 300px;
+    /* Ajusta la altura según tus necesidades */
+    background-color: black;
+    /* Asegura que el fondo sea negro */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#carouselPostres .carousel-item img,
+#carouselTortas .carousel-item img,
+#carouselMasitas .carousel-item img {
+    width: 100%;
+    /* Asegura que las imágenes ocupen el 100% del ancho */
+    height: 100%;
+    /* Ajusta la altura para ocupar todo el contenedor */
+    object-fit: cover;
+    /* Ajusta para cubrir completamente el área */
+}
+
+.content.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    padding: 5%;
+    text-align: center;
+}
+
+.ubicacion,
+.tel {
+    margin: 20px 0;
+}
+
+.ubicacion h4,
+.tel h4 {
+    margin-bottom: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.contact-item i {
+    font-size: 20%;
+    margin-right: 10px;
+    color: white;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+#autor {
+    text-align: right;
+    color: black;
+}
+
+@media all and (min-width: 353px) {}
+
+
+/* Redes
+
+i {
+    font-size: 20px;
+}
+.redes a i {
+    font-size: 25px;
+    background-color: rgba(48, 47, 47, 0.5);
+    border-radius: 40%;
+    padding: 8px; 
+    margin: 2px; 
+    color: rgb(255, 255, 255);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+} */

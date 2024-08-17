@@ -1,0 +1,195 @@
+* {
+
+    margin: 0 ;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    color: white;
+    
+     
+}
+
+
+.content .section-title {
+    
+    font-size: 30px;
+    margin-bottom: 40px;
+    
+}
+
+body{
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #181616 !important; /* Color de fondo */
+  
+}
+
+ 
+/* Barra de navegación */
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.507);
+    position: fixed; 
+    width: 100%;
+    z-index: 100; 
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+
+.logo a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.navbar a {
+    display: block;
+    padding: 23px 20px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background-color: rgb(152, 51, 172);
+    padding: 11px 20px;
+    text-align: left;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+    
+    .navbar a {
+        padding: 10px 20px;
+        text-align: left;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
+
+
+header{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header {
+    height: 70vh !important;
+    background: url(Imagenes/fondo.jpeg) no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+.content header{
+    padding-bottom: 20px;
+}
+
+
+.content{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+
+
+
+/*Columnas*/
+
+h2{
+    text-align: center  ;
+    
+}
+
+.col {
+    margin: 0 15px 0 15px;
+}
+
+.description {
+        text-align: center;
+}
+
+
+.column {
+    border-radius: 15px; /* Curvatura de los bordes */
+    overflow: hidden; /* Oculta el contenido que se desborda de los bordes */
+    margin-bottom: 20px; /* Espacio entre las columnas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Sombra para simular la apariencia de una foto polaroid */
+    transition: transform 0.3s ease-in-out; /* Agrega una transición suave al hacer hover */
+    padding-bottom: 80px;  
+    background-color: #fff; /* Color de fondo */ 
+}
+
+.column:hover {
+    transform: translateY(-5px); /* Levanta ligeramente la imagen al hacer hover */
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    
+}
+
+/*Imagenes del mismo tamaño*/
+.Polaroid-title {
+    text-align: center; /* Alinea el texto al centro */
+    background-color: #fff; /* Color de fondo */
+    color: #333; /* Color del texto */
+    padding: 10px; /* Espacio de relleno */
+    font-weight: bold; /* Texto en negrita */
+}
+.column img {
+    width: 100%;
+    display: block;
+}
+
+.col img {
+    height: 200px; 
+    width: 100%; 
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
