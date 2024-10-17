@@ -3,27 +3,32 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     vertical-align: baseline;
     color: white;
 }
 
 body {
     text-align: center;
-    font-family: sans-serif;
+    font-size: 1.5em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* Header Styles */
-.header {
+.content.header {
     height: 70vh !important;
     background: url(imagenes/fondo.jpeg) no-repeat center;
     background-size: cover;
-    color: white;
+    color: rgb(255, 255, 255);
+    text-align: center;
 }
 
-.content .section-title {
-    font-size: 200%;
-    margin-bottom: 5%;
+.content.header h1 {
+    font-size: 3em; 
+    margin-bottom: 0.5em;
+}
+
+.content.header h2 {
+    font-size: 2em; 
 }
 
 /* Navigation Styles */
@@ -135,8 +140,14 @@ a.btn-saber-mas {
 .about {
     background: rgb(24, 22, 22);
     text-align: center;
-    align-items: center;
     font-size: 100%;
+}
+.about ul {
+    text-align: left; /* Alinea el texto de la lista a la izquierda */
+    list-style-position: inside; /* Hace que los puntos de la lista se alineen con el texto */
+    padding-left: 0; /* Elimina el padding izquierdo para centrar mejor */
+    margin: 0 auto; /* Esto centra la lista dentro del contenedor */
+    display: inline-block; /* Importante para evitar que se expanda por todo el ancho */
 }
 
 .price {
@@ -239,25 +250,8 @@ a.btn-saber-mas {
     color: black;
 }
 
-@media screen and (min-width: 336px) and (max-width: 765px) {
-    .carousel-inner .carousel-item {
-        height: 200px;
-        
-        /* Ajusta la altura según tus necesidades */
-    }
-    .carousel-item img {
-        height: 100%;
-        padding: 2%;
-        width: auto;
-    }
-    .carousel-inner {
-    width: 100%;
-    overflow: hidden;
-}
-
 .carousel-item {
-    height: 300px;
-    /* Ajusta la altura según tus necesidades */
+    height: 300px; /* Altura base para pantallas grandes */
     background-color: black;
     /* Asegura que el fondo sea negro */
 }
@@ -268,22 +262,15 @@ a.btn-saber-mas {
     object-fit: cover;
 }
 
-    @media screen and (min-width: 766px) and (max-width: 999px) {
-        .carousel-inner .carousel-item {
-            height: 250px;
-            /* Ajusta la altura según tus necesidades */
-        }
-
-        .carousel-item img {
-            height: 100%;
-            width: auto;
-        }
+@media screen and (max-width: 765px) {
+    .carousel-item {
+        height: 200px; /* Altura ajustada para pantallas pequeñas */
     }
+}
 
-
-    .carousel-item img {
-        height: 100%;
-        width: auto;
+@media screen and (min-width: 766px) and (max-width: 999px) {
+    .carousel-item {
+        height: 250px; /* Altura ajustada para tablets */
     }
 }
 
