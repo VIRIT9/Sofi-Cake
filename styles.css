@@ -3,36 +3,31 @@
     margin: 0;
     padding: 0;
     border: 0;
+    font-size: 100%;
     vertical-align: baseline;
     color: white;
 }
 
 body {
     text-align: center;
-    font-size: 1.5em;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: sans-serif;
 }
 
 /* Header Styles */
-.content.header {
+.header {
     height: 70vh !important;
     background: url(imagenes/fondo.jpeg) no-repeat center;
     background-size: cover;
-    color: rgb(255, 255, 255);
-    text-align: center;
+    color: white;
 }
 
-.content.header h1 {
-    font-size: 3em; 
-    margin-bottom: 0.5em;
-}
-
-.content.header h2 {
-    font-size: 2em; 
+.content .section-title {
+    font-size: 200%;
+    margin-bottom: 5%;
 }
 
 /* Navigation Styles */
-.topnav {
+.header {
     overflow: hidden;
     background-color: #333;
     position: relative;
@@ -68,7 +63,7 @@ body {
     margin-right: 10px;
 }
 
-.logo a {
+header .logo a {
     margin-left: 20px;
     text-decoration: none;
     color: white;
@@ -85,10 +80,7 @@ body {
     font-size: 100%;
 }
 
-.active {
-    background-color: #000000;
-    color: white;
-}
+
 
 /* Additional Styles */
 p {
@@ -102,7 +94,7 @@ a.btn-saber-mas {
     text-decoration: none;
 }
 
-.head {
+.logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -140,14 +132,8 @@ a.btn-saber-mas {
 .about {
     background: rgb(24, 22, 22);
     text-align: center;
+    align-items: center;
     font-size: 100%;
-}
-.about ul {
-    text-align: left; /* Alinea el texto de la lista a la izquierda */
-    list-style-position: inside; /* Hace que los puntos de la lista se alineen con el texto */
-    padding-left: 0; /* Elimina el padding izquierdo para centrar mejor */
-    margin: 0 auto; /* Esto centra la lista dentro del contenedor */
-    display: inline-block; /* Importante para evitar que se expanda por todo el ancho */
 }
 
 .price {
@@ -206,17 +192,14 @@ a.btn-saber-mas {
     text-align: center;
 }
 
-.ubicacion,
-.tel {
-    margin: 20px 0;
-}
 
 .ubicacion h4,
-.tel h4 {
+.tel h4 
+.redes {
     margin-bottom: 10px;
 }
 
-.contact-item {
+/*.contact-item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,7 +214,7 @@ a.btn-saber-mas {
 
 .contact-item p {
     margin: 0;
-}
+} */
 
 .sr-only {
     position: absolute;
@@ -250,29 +233,7 @@ a.btn-saber-mas {
     color: black;
 }
 
-.carousel-item {
-    height: 300px; /* Altura base para pantallas grandes */
-    background-color: black;
-    /* Asegura que el fondo sea negro */
-}
-
-.carousel-item img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-@media screen and (max-width: 765px) {
-    .carousel-item {
-        height: 200px; /* Altura ajustada para pantallas pequeñas */
-    }
-}
-
-@media screen and (min-width: 766px) and (max-width: 999px) {
-    .carousel-item {
-        height: 250px; /* Altura ajustada para tablets */
-    }
-}
+@media all and (min-width: 353px) {}
 
 
 /* Redes
@@ -300,3 +261,31 @@ i {
     white-space: nowrap;
     border: 0;
 } */
+.social-media {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .icon {
+    text-decoration: none;
+    color: black; /* color inicial */
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2); /* Agranda el ícono */
+  }
+  
+  .facebook:hover {
+    color: #4267B2; /* Color de Facebook */
+  }
+  
+  .instagram:hover {
+    color: #C13584; /* Color de Instagram */
+  }
+  
+  .twitter:hover {
+    color: #1DA1F2; /* Color de Twitter */
+  }
+  
