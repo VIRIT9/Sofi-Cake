@@ -13,65 +13,38 @@ body {
     font-family: sans-serif;
 }
 
-/* Header Styles */
-.header {
-    height: 70vh !important;
+/* Header Styles starts */
+
+.header{
+    
     background: url(imagenes/fondo.jpeg) no-repeat center;
     background-size: cover;
-    color: white;
-}
-
-.content .section-title {
-    font-size: 200%;
-    margin-bottom: 5%;
-}
-
-/* Navigation Styles */
-.header {
     overflow: hidden;
-    background-color: #333;
     position: relative;
+    
 }
 
-.topnav #myLinks {
-    display: none;
-}
-
-.topnav a {
-    color: white;
-    padding: 2% 4%;
-    text-decoration: none;
-    font-size: 100%;
+.header .logo a {
     display: block;
+    padding: 20px 0; /* Ajusta el padding para alinearlo con el navbar */
 }
-
-.topnav a.icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.navbar {
-    display: flex;
-    margin-right: 10px;
-}
-
-header .logo a {
-    margin-left: 20px;
+.header  .navbar{
     text-decoration: none;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.507); /* Asegúrate de que la transparencia sea la correcta */
     text-transform: uppercase;
-    font-size: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%; /* Ajusta este valor según el tamaño deseado del navbar */
+    width: 100%;
+    position: fixed; /* Si deseas que se mantenga en su posición */
+    z-index: 100;
+    padding: 0 20px;
+    
 }
 
-.navbar a {
+
+.header .logo .navbar a {
     display: block;
     padding: 23px 20px;
     color: white;
@@ -79,6 +52,26 @@ header .logo a {
     text-transform: uppercase;
     font-size: 100%;
 }
+
+.header .navbar a:hover {
+    background-color: rgb(152, 51, 172);
+}
+
+.header .section-title h3{
+    text-align: center;
+}
+/* Header Styles ends*/
+
+
+
+
+
+.content .section-title {
+    font-size: 200%;
+    margin-bottom: 5%;
+}
+
+
 
 
 
@@ -94,21 +87,6 @@ a.btn-saber-mas {
     text-decoration: none;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 10%;
-    background-color: rgba(0, 0, 0, 0.507);
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    padding: 0 20px;
-}
-
-.navbar a:hover {
-    background-color: rgb(152, 51, 172);
-}
 
 .content {
     height: 50vh;
@@ -123,10 +101,6 @@ a.btn-saber-mas {
     height: max-content;
     padding: 7%;
     background: #222121;
-}
-
-.section-title {
-    text-align: center;
 }
 
 .about {
