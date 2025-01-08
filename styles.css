@@ -155,14 +155,15 @@ a.btn-saber-mas {
 .carousel-inner {
     width: 100%;
     overflow: hidden;
+    height: 100%;
 }
 
 .carousel-item {
     height: 300px;
-    /* Ajusta la altura según tus necesidades */
-    background-color: black;
-    /* Asegura que el fondo sea negro */
-}
+    /* Ajusta la altura*/
+    /* Asegura que el fondo sea negro,  background-color: black; */
+ }
+
 
 .carousel-item img {
     max-width: 100%;
@@ -179,6 +180,12 @@ a.btn-saber-mas {
     /* Ajusta la altura para ocupar todo el contenedor */
     object-fit: cover;
     /* Ajusta para cubrir completamente el área */
+}
+#carouselPostres .carousel-item img,
+#carouselTortas .carousel-item img,
+#carouselMasitas .carousel-item img,
+.carousel-inner:hover{
+transform: scale(1.1);/*Escala el tamaño de la imagen al 120% de su tamaño original (1.2 = 120%), permitiendo un efecto zoom*/
 }
 
 .content.contact {
