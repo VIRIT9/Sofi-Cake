@@ -42,10 +42,16 @@
 
 .header  .navbar a{
     text-decoration: none;
+    color: white;
+    margin: 0 1rem 0 1rem;
 }
 
+
 .header .navbar a:hover {
-    background-color: rgb(152, 51, 172);
+    
+    color: #eca752;
+    border-bottom: .1rem solid #eca752;
+    padding-bottom: .5rem;
     
 }
 /* Header Styles ends*/
@@ -208,7 +214,26 @@ transform: scale(1.1);/*Escala el tamaño de la imagen al 120% de su tamaño ori
 
 
 
-@media all and (min-width: 353px) {}
+/* media queries */
+@media (max-width:991px){
+}
+
+@media (max-width:768px){
+
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    
+}
+
+
+
 
 
 /* Redes
