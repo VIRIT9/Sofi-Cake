@@ -70,21 +70,15 @@ body {
 
 .saw {
   font-size: 80%;
-  height: max-content;
-  padding: 7%;
+  padding: 5%;
   background: #222121;
 }
-
-
 
 .about {
   background: rgb(24, 22, 22);
   text-align: center;
-  align-items: center;
-  font-size: 100%;
+  padding: 5%;
 }
-
-
 
 .about ul {
   list-style: none;
@@ -275,6 +269,44 @@ body {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
+
+/* Estilos para el formulario de contacto */
+
+
+#contactForm .form-label {
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+#contactForm .form-control {
+  background-color: #333;
+  color: #ffffff;
+  border: 1px solid #eca752;
+  width: 50%;
+}
+
+#contactForm .form-control:focus {
+  background-color: #444;
+  border-color: #eca752;
+  box-shadow: 0 0 5px rgba(236, 167, 82, 0.5);
+}
+
+#contactForm .invalid-feedback {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+}
+
+#formFeedback {
+  font-size: 1rem;
+}
+
+#formFeedback.success {
+  color: #28a745;
+}
+
+#formFeedback.error {
+  color: #ff6b6b;
+}
 /* Footer Styles */
 footer {
   background-color: #1a1a1a;
@@ -311,14 +343,12 @@ footer p {
     width: 100%;
   }
 
-  .carousel-item{
-      margin: 1rem 0;
-  }
-
   .contact-box {
     padding: 1.5rem;
   }
-
+  .social-media .social-item:last-child {
+    border-bottom: 1px solid rgba(236, 167, 82, 0.3);
+  }
 }
 @media (max-width: 450px) {
   html {
@@ -329,6 +359,9 @@ footer p {
     font-size: 1.2rem;
   }
 
+  .saw .col-12 {
+    margin-bottom: 2rem;
+  }
   .carousel-item img {
     height: 200px;
   }
