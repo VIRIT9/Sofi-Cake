@@ -67,7 +67,9 @@ form.addEventListener('submit', function(event){
 
   //Resetear errores
 [nombre, email, telefono, mensaje]. forEach(field => {
+  console.log('Field:', field.value);
   field.classList.remove('is-invalid')
+  
 })
 /*forEach: es un método de los arreglos que ejecuta una función para cada elemento de un arreglo [constantes] 
 field: es un nombre temporal que representa cada elemento del arreglo en cada iteración. 
@@ -75,6 +77,7 @@ Primera iteración: field es nombre.
 Segunda iteración: field es email.
 classList: es una propiedad de los elementos del DOM,  permite manipular las clases CSS de un elemento y acceder a las clases del elemento
 */
+
 
 
 feedback.innerHTML = ''; //Limpia los mensajes anteriores
@@ -109,6 +112,13 @@ feedback.innerHTML = ''; //Limpia los mensajes anteriores
       phone: telefono.value.trim(),
       message: mensaje.value.trim()
     };
+    //trim() es un método de los strings que elimina espacios en blanco (espacios, tabuladores, saltos de línea) del inicio y final del texto.
+
+    //test() es un método de las expresiones regulares (RegExp) que verifica si un texto coincide con el patrón de la regex. Devuelve true si coincide, false si no.
+
+
+
+
 
     fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',
