@@ -67,9 +67,7 @@ form.addEventListener('submit', function(event){
 
   //Resetear errores
 [nombre, email, telefono, mensaje]. forEach(field => {
-  console.log('Field:', field.value);
   field.classList.remove('is-invalid')
-  
 })
 /*forEach: es un método de los arreglos que ejecuta una función para cada elemento de un arreglo [constantes] 
 field: es un nombre temporal que representa cada elemento del arreglo en cada iteración. 
@@ -105,7 +103,9 @@ feedback.innerHTML = ''; //Limpia los mensajes anteriores
     isValid = false;
   }
 
-  if (isValid) {
+   // Si es válido, enviar con fetch
+   if (isValid) {
+    // Crear objeto con los datos
     const formData = {
       name: nombre.value.trim(),
       email: email.value.trim(),
@@ -116,30 +116,56 @@ feedback.innerHTML = ''; //Limpia los mensajes anteriores
 
     //test() es un método de las expresiones regulares (RegExp) que verifica si un texto coincide con el patrón de la regex. Devuelve true si coincide, false si no.
 
+      // Mostrar mensaje de "enviando"
+      feedback.classList.remove('text-danger');
+      feedback.classList.add('text-info');
+      feedback.textContent = 'Enviando mensaje...';
+
+      //fetch(URL, opciones)
+      fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST', //enviamos datos al servidor
+        headers: { //especifica que los datos se envian en formato JSON
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData) // Convierte el objeto formData a una cadena JSON con JSON.stringify():
 
 
-
-
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData)
-    })
-      .then(response => response.json())
-      .then(data => {
-        feedback.classList.add('success');
-        feedback.textContent = 'Message sent successfully!';
-        form.reset();
       })
-      .catch(error => {
-        feedback.classList.add('error');
-        feedback.textContent = 'Error sending message. Please try again.';
-        console.error('Error:', error);
-      });
-  } else {
-    feedback.textContent = 'Please fix the errors.';
-  }
+
+      // Manejar la respuesta
+    .then(response => {
+      if (!response.ok) { //response.ok: Verifica si la solicitud fue exitosa (código HTTP 200-299).
+
+
+        throw new Error('Error en la respuesta del servidor'); // throw new Error: Si la respuesta no es válida (por ejemplo, error 404 o 500), lanza un error que se captura en el .catch.
+        }
+      return response.json(); // Convierte la respuesta del servidor (que viene como texto JSON) en un objeto JS
+      
+    })
+
+    // Éxito
+    .then(data => { // Contiene la respuesta del servidor
+
+      feedback.classList.remove('text-info');
+      feedback.classList.add('text-success');
+      feedback.textContent = '¡Mensaje enviado con éxito!'; //feedback: Cambia el mensaje a "¡Mensaje enviado con éxito!" y usa la clase text-success (verde) de Bootstrap.
+      form.reset(); // Limpia el formulario
+      console.log('Respuesta del servidor:', data);
+    })
+
+    //Manejar errores
+    .catch(error => { //Captura cualquier error (problema de red, servidor no disponible, etc.).
+    
+      feedback.classList.remove('text-info');
+      feedback.classList.add('text-danger');
+      feedback.textContent = 'Error al enviar el mensaje. Intente de nuevo.';
+      console.error('Error:', error);
+    });
+} else {
+  // Mostrar errores
+  feedback.classList.remove('text-success');
+  feedback.classList.add('text-danger');
+  feedback.textContent = 'Por favor, corrija los errores.';
+}
 });
 });
