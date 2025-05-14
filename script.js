@@ -63,13 +63,13 @@ const telefonoRegex = /^\d{8,12}$/; // Para teléfonos
 
 
 form.addEventListener('submit', function(event){
-  event.preventDefault(); //evita que la página se recargue, dando control para validar y enviar los datos.
+  event.preventDefault(); //Evita que la página se recargue, dando control para validar y enviar los datos.
 
   //Resetear errores
 [nombre, email, telefono, mensaje]. forEach(field => {
   field.classList.remove('is-invalid')
 })
-/*forEach: es un método de los arreglos que ejecuta una función para cada elemento de un arreglo [constantes] 
+/*forEach: Es un método de los arreglos que ejecuta una función para cada elemento de un arreglo [constantes] 
 field: es un nombre temporal que representa cada elemento del arreglo en cada iteración. 
 Primera iteración: field es nombre.
 Segunda iteración: field es email.
