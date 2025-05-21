@@ -69,16 +69,15 @@ form.addEventListener('submit', function(event){
 [nombre, email, telefono, mensaje]. forEach(field => {
   field.classList.remove('is-invalid')
 })
+
+ feedback.classList.remove('text-success', 'text-danger', 'text-info');
+    feedback.innerHTML = ''; //Limpia los mensajes anteriores
 /*forEach: Es un método de los arreglos que ejecuta una función para cada elemento de un arreglo [constantes] 
 field: es un nombre temporal que representa cada elemento del arreglo en cada iteración. 
 Primera iteración: field es nombre.
 Segunda iteración: field es email.
 classList: es una propiedad de los elementos del DOM,  permite manipular las clases CSS de un elemento y acceder a las clases del elemento
 */
-
-
-
-feedback.innerHTML = ''; //Limpia los mensajes anteriores
 
   // Validar
   let isValid = true;
@@ -106,22 +105,24 @@ feedback.innerHTML = ''; //Limpia los mensajes anteriores
    // Si es válido, enviar con fetch
    if (isValid) {
     // Crear objeto con los datos
-    const formData = {
-      name: nombre.value.trim(),
-      email: email.value.trim(),
-      phone: telefono.value.trim(),
-      message: mensaje.value.trim()
+    const submitButton = form.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      feedback.classList.add('text-info');
+      feedback.textContent = 'Enviando mensaje...';
     };
     //trim() es un método de los strings que elimina espacios en blanco (espacios, tabuladores, saltos de línea) del inicio y final del texto.
 
     //test() es un método de las expresiones regulares (RegExp) que verifica si un texto coincide con el patrón de la regex. Devuelve true si coincide, false si no.
 
-      // Mostrar mensaje de "enviando"
-      feedback.classList.remove('text-danger');
-      feedback.classList.add('text-info');
-      feedback.textContent = 'Enviando mensaje...';
 
-      //fetch(URL, opciones)
+    const formData = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+
+      /*fetch(URL, opciones)
       fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST', //enviamos datos al servidor
         headers: { //especifica que los datos se envian en formato JSON
@@ -130,7 +131,7 @@ feedback.innerHTML = ''; //Limpia los mensajes anteriores
         body: JSON.stringify(formData) // Convierte el objeto formData a una cadena JSON con JSON.stringify():
 
 
-      })
+      })*/
 
       // Manejar la respuesta
     .then(response => {
