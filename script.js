@@ -113,12 +113,14 @@ classList: es una propiedad de los elementos del DOM,  permite manipular las cla
       
       const formData = new FormData(form);
       fetch('/', {
-        method: 'POST',
-        body: new URLSearchParams({
-          'form-name': 'contactForm',
-          ...Object.fromEntries(formData)
+  method: 'POST',
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  body: new URLSearchParams({
+    'form-name': 'contactForm',
+    ...Object.fromEntries(formData)
   }).toString()
 })
+      
 
       // Manejar la respuesta
     .then(response => {
