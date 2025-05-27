@@ -1,138 +1,107 @@
 * {
-
-    margin: 0 ;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    color: white;
-    
-     
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
 
-
-.content .section-title {
-    
-    font-size: 30px;
-    margin-bottom: 40px;
-    
-}
-
-body{
-    text-align: center;
-    font-family: sans-serif;
-    background-color: #181616 !important; /* Color de fondo */
-  
-}
-
- 
-/* Barra de navegación */
-.head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.507);
-    position: fixed; 
-    width: 100%;
-    z-index: 100; 
-    padding: 0 20px;
-}
-
-.navbar {
-    display: flex;
-    margin-right: 10px;
-}
-
-.logo a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    font-size: 25px;
-}
-
-.navbar a {
-    display: block;
-    padding: 23px 20px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-}
-
-.navbar a:hover {
-    background-color: rgb(152, 51, 172);
-    padding: 11px 20px;
-    text-align: left;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
-.menu-toggle div {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 50px;
-        left: 0;
-    }
-    
-    .navbar a {
-        padding: 10px 20px;
-        text-align: left;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-}
-
-
-header{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
+/* Header Styles */
 .header {
-    height: 70vh !important;
-    background: url(Imagenes/fondo.jpeg) no-repeat center;
-    background-size: cover;
-    color: white;
+  background: url(imagenes/fondo.jpeg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1000;
+  padding-top: 80px; /* Espacio para la navbar fija */
 }
 
-.content header{
-    padding-bottom: 20px;
+.header .navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  font-size: 1rem;
 }
 
+.header .navbar a {
+  text-decoration: none;
+  color: white;
+  margin: 0 1rem;
+}
 
-.content{
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
+.header .navbar a:hover .navbar-nav .nav-link:hover {
+  color: #eca752;
+  border-bottom: 0.1rem solid #eca752;
+  padding-bottom: 0.5rem;
+}
+
+/* Section Styles */
+.section-titles  .title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.content {
+  padding: 5% 0;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.saw {
+  font-size: 80%;
+  padding: 5%;
+  background: #222121;
+}
+
+.about {
+  background: rgb(24, 22, 22);
+  text-align: center;
+  padding: 5%;
+}
+
+.about ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.about ul li {
+  margin: 0.5rem 0;
+}
+
+.price {
+  background: url(imagenes/precio.webp) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+.contain p {
+  background-color: rgba(48, 47, 47, 0.3);
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}   
+
+/* Evitar color y text-align global para permitir estilos específicos */
+body {
+  color: #ffffff;
+  background-color: #222121;
 }
 
 
@@ -176,7 +145,7 @@ h2{
 }
 
 /*Imagenes del mismo tamaño*/
-.Polaroid-title {
+.polaroid-title {
     text-align: center; /* Alinea el texto al centro */
     background-color: #fff; /* Color de fondo */
     color: #333; /* Color del texto */
@@ -192,4 +161,31 @@ h2{
     height: 200px; 
     width: 100%; 
     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+    
+    .navbar a {
+        padding: 10px 20px;
+        text-align: left;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
 }

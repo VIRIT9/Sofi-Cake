@@ -271,6 +271,11 @@ body {
 }
 
 /* Estilos para el formulario de contacto */
+
+.mt-4 #contactForm .mb-3{
+  text-align: center;
+  align-items: center;
+}
 #contactForm .form-label {
   color: #ffffff;
   font-size: 1.1rem;
@@ -352,6 +357,11 @@ footer p {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .section-titles,
+  .title {
+    font-size: 2rem;
   }
 
   .navbar-brand {
