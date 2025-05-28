@@ -264,28 +264,44 @@ body {
 }
 
 /*Para asegurar que los íconos en ubicación y teléfono sean más grandes */
-.ubicacion i,
-.tel i {
+.ubicacion i .tel i {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
 /* Estilos para el formulario de contacto */
-
-.mt-4 #contactForm .mb-3{
-  text-align: center;
+#contactForm {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 1000px; 
+  margin: 0 auto; 
+  color: white;
 }
+
+#contactForm .mb-3 {
+  display: flex;
+  align-items: center; 
+  width: 100%;
+  max-width: 600px; 
+  margin: 1rem 0 1rem 0; 
+}
+
 #contactForm .form-label {
-  color: #ffffff;
-  font-size: 1.1rem;
+  flex: 0 0 90px;
+  margin: 0 10px 0 -50px; 
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: 500;
 }
 
 #contactForm .form-control {
+  flex: 1; 
+  margin: 0 ; 
   background-color: #333;
-  color: #ffffff;
   border: 1px solid #eca752;
-  width: 50%;
+  
 }
 
 #contactForm .form-control:focus {
@@ -294,9 +310,26 @@ body {
   box-shadow: 0 0 5px rgba(236, 167, 82, 0.5);
 }
 
+#contactForm .form-control::placeholder {
+  color: #999; /* Subtle placeholder color */
+  font-style: italic; /* Italic for distinction */
+  opacity: 0.7;
+}
+
+#contactForm .btn-primary {
+  width: auto; 
+  margin: 1rem auto; 
+}
+
 #contactForm .invalid-feedback {
   color: #ff6b6b;
   font-size: 0.9rem;
+  margin-left: 190px;
+}
+#contactForm textarea.form-control::placeholder {
+  color: #999;
+  font-style: italic;
+  opacity: 0.7;
 }
 
 #formFeedback {
@@ -352,6 +385,25 @@ footer p {
   }
   .social-media .social-item:last-child {
     border-bottom: 1px solid rgba(236, 167, 82, 0.3);
+  }
+  #contactForm .mb-3 {
+    flex-direction: column; 
+    align-items: flex-start; /* alinea hacia la izquierda*/
+  }
+
+  #contactForm .form-label {
+    flex: none; 
+    width: 100%; 
+    text-align: left; 
+    margin: 0 0 5px 0; 
+  }
+
+  #contactForm .form-control {
+    width: 100%; 
+  }
+
+  #contactForm .invalid-feedback {
+    margin-left: 0; 
   }
 }
 @media (max-width: 450px) {
