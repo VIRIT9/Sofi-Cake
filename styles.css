@@ -39,7 +39,7 @@ body {
 }
 
 .header .navbar {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,7 +67,7 @@ body {
   font-size: 5rem;
   font-weight: bold;
   color: white;
-  background-color: rgba(14, 14, 14, 0.692); 
+  background-color: rgba(14, 14, 14, 0.7); 
   text-transform: uppercase;
   padding: 10px 20px; 
   display: inline-block; 
@@ -152,6 +152,8 @@ body {
   height: 300px;
   overflow: hidden;
   position: relative;
+  border: 4px ridge #d6943f;
+  box-shadow: 10px 5px 5px #110f0c9d;
 }
 
 .carousel-item {
@@ -346,6 +348,8 @@ body {
 #contactForm .btn-primary {
   width: auto; 
   margin: 1rem auto; 
+  background-color: #d6943f;
+  color: white;
 }
 
 #contactForm .invalid-feedback {
