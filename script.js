@@ -147,3 +147,19 @@ classList: es una propiedad de los elementos del DOM,  permite manipular las cla
 }
 });
 });
+
+//Menu desplegable
+const navbarToggler = document.querySelector('.navbar-toggler');
+  const togglerIcon = navbarToggler.querySelector('.navbar-toggler-icon');
+  const closeIcon = navbarToggler.querySelector('.navbar-close-icon');
+  const navbarCollapse = document.getElementById('navbarNav');
+
+  navbarCollapse.addEventListener('show.bs.collapse', function() {
+    togglerIcon.style.display = 'none';
+    closeIcon.style.display = 'inline-block';
+  });
+
+  navbarCollapse.addEventListener('hide.bs.collapse', function() {
+    togglerIcon.style.display = 'inline-block';
+    closeIcon.style.display = 'none';
+  });

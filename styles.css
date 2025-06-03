@@ -48,8 +48,12 @@ body {
   position: fixed;
   top: 0;
   z-index: 100;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
+
+ .navbar-brand {
+    font-size: 1.5rem;
+  }
 
 .header .navbar a {
   text-decoration: none;
@@ -63,6 +67,27 @@ body {
   border-bottom: 0.1rem solid #eca752;
   padding-bottom: 0.5rem;
 }
+
+.navbar-toggler {
+  border: none; 
+  padding: 0.5rem; 
+}
+
+.navbar-toggler:focus {
+  box-shadow: none; 
+}
+
+.navbar-toggler-icon {
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28236, 167, 82, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); 
+}
+
+.navbar-close-icon {
+  font-size: 1.5rem;
+  color: #eca752; 
+}
+
 .header .welcome{
   font-size: 5rem;
   font-weight: bold;
@@ -73,8 +98,7 @@ body {
   display: inline-block; 
   border: 3px solid #eca752;
   border-radius: 5rem;
-  
-  }
+}
 
 /* Section Styles */
 .section-titles,
@@ -105,13 +129,14 @@ body {
 }
 
 .about ul {
-  list-style: none;
   padding: 0;
   font-size: 1.2rem;
+  
 }
 
 .about ul li {
   margin: 0.5rem 0;
+  font-size: 1.5rem;
 }
 
 .price {
@@ -348,6 +373,21 @@ body {
 #contactForm .btn-primary {
   width: auto; 
   margin: 1rem auto; 
+  background-color: #eca752;
+  color: white;
+  border: none;
+  color: white;
+  text-decoration: none;
+  background-color: #eca752;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+
+
+#contactForm .btn-primary:hover {
   background-color: #d6943f;
   color: white;
 }
@@ -398,7 +438,7 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  .section-titles,
+ .section-titles,
   .title {
     font-size: 1.5rem;
   }
@@ -414,46 +454,117 @@ footer p {
   .contact-box {
     padding: 1.5rem;
   }
+
   .social-media .social-item:last-child {
     border-bottom: 1px solid rgba(236, 167, 82, 0.3);
   }
+
   #contactForm .mb-3 {
-    flex-direction: column; 
-    align-items: flex-start; /* alinea hacia la izquierda*/
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   #contactForm .form-label {
-    flex: none; 
-    width: 100%; 
-    text-align: left; 
-    margin: 0 0 5px 0; 
+    flex: none;
+    width: 100%;
+    text-align: left;
+    margin: 0 0 5px 0;
   }
 
   #contactForm .form-control {
-    width: 100%; 
+    width: 100%;
   }
 
   #contactForm .invalid-feedback {
-    margin-left: 0; 
+    margin-left: 0;
+  }
+
+  /* Navbar Collapse for Mobile */
+  .navbar-collapse {
+    position: fixed;
+    top: 60px; /* Below fixed navbar */
+    right: 0;
+    width: 70%; /* Side panel width */
+    max-width: 250px; /* Max width for larger phones */
+    height: calc(100vh - 60px); /* Full height minus navbar */
+    background-color: #1a1a1a; /* Dark theme */
+    padding: 1rem;
+    transform: translateX(100%); /* Hidden off-screen */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0); /* Slide in from right */
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-link:hover {
+    color: #eca752;
+    border-bottom: none; /* Remove bottom border for side menu */
+    background-color: rgba(236, 167, 82, 0.1); /* Subtle hover effect */
   }
 }
 @media (max-width: 450px) {
   html {
     font-size: 50%;
   }
+  
+  .header .welcome{
+  font-size: 2.5rem;
+  padding: 10px 20px; 
+}
 
   .section-titles,
   .title {
     font-size: 2rem;
   }
 
-  .navbar-brand {
-    font-size: 1.2rem;
+  #navbarNav{
+    
+    background-color: #1a1a1a;
+    text-align: end;
+    display:flex;
+    align-items: end;
+    justify-content: space-between;
+    height: 60%;
+    max-width: 100px;
+    
   }
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+.header .navbar a {
+  text-decoration: none;
+  color: white;
+  margin: 0 1rem;
+}
+
+
+
 
   .saw .col-12 {
     margin-bottom: 2rem;
   }
+
   .carousel-item img {
     height: 200px;
   }
@@ -462,5 +573,38 @@ footer p {
   .carousel-item {
     height: 200px;
   }
+    .contact-info {
+    gap: 0.5rem;
+  }
 
+  .contact-item i {
+    font-size: 1rem;
+  }
+
+  .contact-item p {
+    font-size: 0.8rem;
+  }
+
+  .social-media h4 {
+    font-size: 1.2rem;
+    margin-top: 8px;
+  }
+
+  .social-media ul {
+    gap: 0.5rem;
+  }
+
+  .social-media .social-link {
+    font-size: 0.8rem;
+  }
+
+  .social-media .icon-container {
+    width: 18px;
+    height: 18px;
+  }
+
+  .navbar-collapse {
+    width: 80%; /* Slightly wider for very small screens */
+    max-width: 200px;
+  }
 }
