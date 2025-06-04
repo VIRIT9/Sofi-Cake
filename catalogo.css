@@ -8,19 +8,37 @@
   box-sizing: border-box;
 }
 
+body {
+  color: #ffffff;
+  background: #222121;
+}
+
 /* Header Styles */
 .header {
-  background: url(imagenes/fondo.jpeg) no-repeat center;
-  background-size: cover;
+  width: 100%;
+  height: 30rem;
   overflow: hidden;
   position: relative;
   text-transform: uppercase;
   z-index: 1000;
-  padding-top: 80px; /* Espacio para la navbar fija */
+  padding-top: 80px;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(imagenes/fondo.JPG) no-repeat center;
+  background-size: cover;
+  opacity: 0.8;
+  z-index: -1;
 }
 
 .header .navbar {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,7 +47,11 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
 }
 
 .header .navbar a {
@@ -38,16 +60,52 @@
   margin: 0 1rem;
 }
 
-.header .navbar a:hover .navbar-nav .nav-link:hover {
+.header .navbar a:hover,
+.navbar-nav .nav-link:hover {
   color: #eca752;
   border-bottom: 0.1rem solid #eca752;
   padding-bottom: 0.5rem;
 }
 
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28236, 167, 82, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-close-icon {
+  font-size: 1.5rem;
+  color: #eca752;
+}
+
+.header .welcome {
+  font-size: 3.5  rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(14, 14, 14, 0.7);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  display: inline-block;
+  border: 3px solid #eca752;
+  border-radius: 5rem;
+  margin-top: 5rem;
+}
+
 /* Section Styles */
-.section-titles  .title {
+.section-titles {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  color: #eca752;
+  text-align: center;
 }
 
 .content {
@@ -59,133 +117,254 @@
   align-items: center;
 }
 
-.saw {
-  font-size: 80%;
-  padding: 5%;
-  background: #222121;
+/* Products */
+.products {
+  padding: 5% 0;
 }
 
-.about {
-  background: rgb(24, 22, 22);
-  text-align: center;
-  padding: 5%;
-}
-
-.about ul {
-  list-style: none;
-  padding: 0;
-  font-size: 1.2rem;
-}
-
-.about ul li {
-  margin: 0.5rem 0;
-}
-
-.price {
-  background: url(imagenes/precio.webp) no-repeat center;
-  background-attachment: fixed;
-  background-size: cover;
-  text-align: center;
-}
-
-.contain p {
-  background-color: rgba(48, 47, 47, 0.3);
-  width: 90%;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
+.polaroid {
+  background-color: #2a2a2a; /* Darker to match theme */
   border-radius: 10px;
-  font-size: 1.1rem;
-}   
-
-/* Evitar color y text-align global para permitir estilos específicos */
-body {
-  color: #ffffff;
-  background-color: #222121;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-
-
-
-/*Columnas*/
-
-h2{
-    text-align: center  ;
-    
+.polaroid:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(236, 167, 82, 0.3);
 }
 
-.col {
-    margin: 0 15px 0 15px;
+.polaroid img {
+  width: 100%;
+  height: 250px; /* Fixed height for consistency */
+  object-fit: cover;
+  display: block;
 }
 
-.description {
-        text-align: center;
-}
-
-
-.column {
-    border-radius: 15px; /* Curvatura de los bordes */
-    overflow: hidden; /* Oculta el contenido que se desborda de los bordes */
-    margin-bottom: 20px; /* Espacio entre las columnas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Sombra para simular la apariencia de una foto polaroid */
-    transition: transform 0.3s ease-in-out; /* Agrega una transición suave al hacer hover */
-    padding-bottom: 80px;  
-    background-color: #fff; /* Color de fondo */ 
-}
-
-.column:hover {
-    transform: translateY(-5px); /* Levanta ligeramente la imagen al hacer hover */
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-    
-}
-
-/*Imagenes del mismo tamaño*/
 .polaroid-title {
-    text-align: center; /* Alinea el texto al centro */
-    background-color: #fff; /* Color de fondo */
-    color: #333; /* Color del texto */
-    padding: 10px; /* Espacio de relleno */
-    font-weight: bold; /* Texto en negrita */
-}
-.column img {
-    width: 100%;
-    display: block;
+  text-align: center;
+  background-color: #2a2a2a86;
+  color: #ffffff;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-top: 2px solid #eca752;
 }
 
-.col img {
-    height: 200px; 
-    width: 100%; 
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+/* Contact */
+.contact {
+  background-color: rgb(22, 22, 22);
+  padding: 5%;
 }
 
+.contact-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
+.contact-box h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #eca752;
+}
+
+.contact-box p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.contact-box i {
+  font-size: 1.5rem;
+  color: #eca752;
+}
+
+.social-media {
+  text-align: center;
+}
+
+.social-media ul {
+  padding: 0;
+  margin: 0;
+}
+
+.social-media .social-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(236, 167, 82, 0.3);
+}
+
+.social-media .social-item:last-child {
+  border-bottom: none;
+}
+
+.social-media .social-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  justify-content: flex-start;
+}
+
+.social-media .icon-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.social-media .social-link:hover {
+  transform: translateY(-3px);
+}
+
+.social-media .whatsapp:hover {
+  color: #25d366;
+}
+
+.social-media .instagram:hover {
+  color: #c13584;
+}
+
+.social-media .x:hover {
+  color: #1da1f2;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
 
 @media (max-width: 768px) {
-    .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 50px;
-        left: 0;
-    }
-    
-    .navbar a {
-        padding: 10px 20px;
-        text-align: left;
-    }
+  .header .welcome {
+    font-size: 3rem;
+  }
 
-    .menu-toggle {
-        display: flex;
-    }
+  .section-titles {
+    font-size: 1.5rem;
+  }
 
-    .navbar.active {
-        display: flex;
-    }
+  .content {
+    padding: 10% 5%;
+  }
+
+  .contact-box {
+    padding: 1.5rem;
+  }
+
+  .social-media .social-item:last-child {
+    border-bottom: 1px solid rgba(236, 167, 82, 0.3);
+  }
+
+  /* Navbar Collapse */
+  
+  .header .navbar {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 70%;
+    max-width: 250px;
+    height: calc(100vh - 60px);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-link:hover {
+    color: #eca752;
+    border-bottom: none;
+    background-color: rgba(236, 167, 82, 0.1);
+  }
+
+  .polaroid img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header .welcome {
+    font-size: 2.5rem;
+    padding: 10px 20px;
+  }
+
+  .section-titles {
+    font-size: 2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-collapse {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  .polaroid img {
+    height: 180px;
+  }
+
+  .social-media .social-link {
+    font-size: 0.8rem;
+  }
+
+  .social-media .icon-container {
+    width: 18px;
+    height: 18px;
+  }
 }
